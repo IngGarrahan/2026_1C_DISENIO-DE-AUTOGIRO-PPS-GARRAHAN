@@ -1,26 +1,155 @@
-# 🚁 Diseño Dinámico y Aerodinámico de un Rotor de Autogiro
+# Diseño Dinámico y Aerodinámico de un Rotor de Autogiro
 
-Proyecto PPS de análisis aerodinámico y dinámico de un rotor de autogiro.
+## Practica Profesional Supervisada (PPS)
 
-## Contenido
-- Teoría de elementos de pala
-- Descenso vertical
-- Vuelo hacia adelante
-- Pala avanzante y retrocedente
-- Modelo de batimiento
-- Datos aerodinámicos dependientes de Reynolds
+Repositorio correspondiente al desarrollo de una herramienta numérica para el **análisis y diseño aerodinámico y dinámico de un rotor de autogiro**, capaz de predecir el comportamiento del rotor bajo condiciones de **autorrotación en descenso vertical y vuelo hacia adelante**.
 
-## Estructura
-- `notebooks/`: desarrollo y simulación completa
-- `src/`: módulos reutilizables
-- `data/`: perfiles aerodinámicos
-- `results/`: gráficos generados
-- `docs/`: documentación
+El proyecto implementa un modelo basado en la **teoría de elementos de pala**, resolviendo las fuerzas aerodinámicas y la dinámica del rotor mediante un proceso iterativo.
 
-## Ejecución
-```bash
-pip install -r requirements.txt
-jupyter notebook notebooks/PPS_ALAN_Rev14.ipynb
+---
+
+# Objetivo del proyecto
+
+El objetivo principal es desarrollar una herramienta computacional que permita:
+
+* Analizar la generación de sustentación en un rotor de autogiro.
+* Evaluar el comportamiento aerodinámico de cada segmento de pala.
+* Calcular fuerzas, momentos y parámetros dinámicos del rotor.
+* Determinar condiciones de autorrotación para diferentes condiciones de vuelo.
+
+---
+
+# Descripción general
+
+El rotor se modela mediante una discretización de la pala en múltiples elementos. Para cada sección se calculan:
+
+* Velocidad relativa del flujo.
+* Ángulo de ataque.
+* Número de Reynolds.
+* Coeficientes aerodinámicos.
+* Fuerzas de sustentación y resistencia.
+* Momentos aerodinámicos.
+
+Los coeficientes aerodinámicos se obtienen a partir del análisis del perfil seleccionado utilizando datos generados mediante herramientas como **XFoil**.
+
+---
+
+# Metodología
+
+## Teoría de elementos de pala
+
+Cada pala se divide en segmentos donde se evalúan las condiciones locales del flujo.
+
+A partir de la velocidad relativa y los coeficientes aerodinámicos se calculan:
+
+* Sustentación.
+* Arrastre.
+* Fuerzas tangenciales y normales.
+* Momento generado sobre el rotor.
+
+---
+
+## Descenso vertical
+
+Para esta condición se analiza el flujo perpendicular al rotor considerando:
+
+* Velocidad de descenso.
+* Velocidad inducida.
+* Ángulo de flujo.
+* Ángulo de ataque de pala.
+
+El modelo permite obtener la distribución de fuerzas a lo largo del radio del rotor.
+
+---
+
+## Vuelo hacia adelante
+
+En avance aparece una condición asimétrica entre ambas palas:
+
+* Pala que avanza.
+* Pala que retrocede.
+
+Por esta razón se analiza el rotor durante un giro completo, considerando las diferencias de velocidad producidas por el viento relativo.
+
+Además, se incorpora el fenómeno de **batimiento**, permitiendo modelar el movimiento de aleteo de las palas para compensar las diferencias aerodinámicas.
+
+---
+
+# Modelo dinámico
+
+La dinámica del rotor se representa mediante una ecuación diferencial no lineal de segundo orden asociada al batimiento de pala.
+
+La ecuación se resuelve utilizando herramientas numéricas de Python mediante integradores de ecuaciones diferenciales.
+
+---
+
+# Tecnologías utilizadas
+
+* Python
+* NumPy
+* SciPy
+* Matplotlib
+* XFoil (obtención de coeficientes aerodinámicos)
+
+---
+
+# Estructura del repositorio
+
+```
+.
+├── Codigo/
+│   ├── modelo_rotor.py
+│   ├── calculos_aerodinamicos.py
+│   └── simulacion_dinamica.py
+│
+├── Datos/
+│   └── coeficientes_aerodinamicos/
+│
+├── Resultados/
+│   ├── graficos/
+│   └── tablas/
+│
+├── Documentacion/
+│   └── Informe_PPS.pdf
+│
+└── README.md
 ```
 
-Autores: Alan Garrahan - Elvio Heidenreich
+*(La estructura puede modificarse según los archivos finales incluidos en el repositorio.)*
+
+---
+
+# Resultados obtenidos
+
+El modelo permite observar:
+
+* Variación de sustentación con la velocidad.
+* Distribución de fuerzas sobre la pala.
+* Diferencias entre pala de avance y retroceso.
+* Evolución del ángulo de batimiento.
+
+Los resultados muestran que el aumento de velocidad incrementa la sustentación debido a su dependencia cuadrática con la velocidad relativa del flujo.
+
+---
+
+# Conclusiones
+
+Se logró desarrollar un modelo capaz de representar el comportamiento aerodinámico y dinámico de un rotor de autogiro mediante la teoría de elementos de pala.
+
+La herramienta permite analizar la influencia de:
+
+* Geometría del rotor.
+* Condiciones de vuelo.
+* Perfil aerodinámico.
+* Número de Reynolds.
+* Fenómeno de batimiento.
+
+Este desarrollo permite continuar con futuras mejoras incorporando nuevos perfiles, materiales y configuraciones de rotor.
+
+---
+
+# Autor
+
+**Alan Garrahan**
+Facultad de Ingeniería
+Universidad Nacional de Lomas de Zamora
