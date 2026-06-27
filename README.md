@@ -149,5 +149,5 @@ Este desarrollo permite continuar con futuras mejoras incorporando nuevos perfil
 # Autor
 
 **Alan Garrahan**
-Facultad de Ingeniería
-Universidad Nacional de Lomas de Zamora
+
+<img width="562" height="183" alt="image" src="https://github.com/user-attachments/assets/183ca983-fc6c-4694-9581-a1344d4de029" />
