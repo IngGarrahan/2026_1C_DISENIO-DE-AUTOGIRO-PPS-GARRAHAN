@@ -115,7 +115,6 @@ La ecuación se resuelve utilizando herramientas numéricas de Python mediante i
 └── README.md
 ```
 
-*(La estructura puede modificarse según los archivos finales incluidos en el repositorio.)*
 
 ---
 
