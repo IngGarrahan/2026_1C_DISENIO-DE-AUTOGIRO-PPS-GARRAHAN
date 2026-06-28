@@ -6,22 +6,22 @@
 ---
 
 ## Índice
-* [1. Introducción / Objetivo general](#introducción--objetivo-general)
-* [2. Objetivos específicos](#objetivos-específicos)
-* [3. Descripción técnica](#Descripción-técnica)
-* [4. Arquitectura del sistema](#4.-Arquitectura-del-sistema)
-* [5. Instrucciones de uso](#5.-Instrucciones-de-uso)
-* [Estructura del repositorio](#estructura-del-repositorio)
+* 1. [Introducción / Objetivo general](#introducción--objetivo-general)
+* 2. [Objetivos específicos](#objetivos-específicos)
+* 3. [Descripción técnica](#Descripción-técnica)
+* 4. [Arquitectura del sistema](#4.-Arquitectura-del-sistema)
+* 5. [Instrucciones de uso](#Instrucciones-de-uso)
+* 6. [Estructura del repositorio](#estructura-del-repositorio)
 * [Autor](#autor)
 
 ---
 
-# 1. Introducción / Objetivo general
+# Introducción / Objetivo general
 
 Este repositorio documenta el desarrollo de una Práctica Profesional Supervisada (PPS), realizada sobre el diseño dinámico y aerodinámico de un rotor de autogiro.
 Se busca desarrollar un modelo numérico para simular el comportamiento aerodinámico y dinámico de un rotor de autogiro mediante la Teoría de Elementos de Pala, obteniendo la distribución de fuerzas, momentos y parámetros aerodinámicos del sistema.
 
-# 2. Objetivos específicos
+# Objetivos específicos
 
 - Implementar un modelo basado en Blade Element Theory.
 - Calcular velocidades relativas, ángulos de ataque y coeficientes aerodinámicos.
@@ -29,7 +29,7 @@ Se busca desarrollar un modelo numérico para simular el comportamiento aerodin�
 - Analizar el comportamiento durante descenso vertical y vuelo hacia adelante.
 - Modelar el fenómeno dinámico de batimiento del rotor.
 
-# 3. Descripción técnica
+# Descripción técnica
 El script modela el comportamiento dinámico traduciendo las leyes de la aerodinámica bidimensional al espacio discreto de la pala[cite: 32]. En vuelo de avance, calcula la velocidad tangencial ($V_{Bl} = \Omega R \cdot r \pm V$) y la velocidad perpendicular ($w_{Bl}$) considerando el aporte de la velocidad inducida ($w_{Ri}$) y la tasa de cambio del batimiento ($\beta'$)[cite: 45, 46]. 
 
 El núcleo del dinamismo radica en la resolución de la ecuación diferencial ordinaria no lineal de segundo orden:
@@ -37,7 +37,7 @@ $$\beta'' + P(\psi)\beta' + Q(\psi)\beta = R(\psi)$$
 Donde $P(\psi)$ representa el amortiguamiento aerodinámico, $Q(\psi)$ la rigidez dinámica modificada por la fuerza centrífuga, y $R(\psi)$ las excitaciones armónicas aerodinámicas introducidas por la velocidad de traslación de la aeronave[cite: 61, 65]. Debido al carácter rígidamente acoplado (stiff) del sistema bajo ciertas velocidades, se seleccionó el método numérico adaptativo **LSODA**.
 
 
-# 4. Arquitectura del sistema
+# Arquitectura del sistema
 
 ### Entradas (parámetros / señales):
 * Parámetros operativos: Velocidad de descenso ($V_{sink}$), velocidad de avance ($V$), velocidad de giro ($n_R$ en RPM)[cite: 22, 23, 45].
@@ -53,7 +53,7 @@ Donde $P(\psi)$ representa el amortiguamiento aerodinámico, $Q(\psi)$ la rigide
 
 ---
 
-# 5. Instrucciones de uso
+# Instrucciones de uso
 
 ### Requisitos previos
 * **Software:** Python 3.8 o superior.
@@ -72,7 +72,7 @@ Obtención de beta:
 
 ---
 
-#Estructura del repositorio
+# Estructura del repositorio
 
 ---
 .
