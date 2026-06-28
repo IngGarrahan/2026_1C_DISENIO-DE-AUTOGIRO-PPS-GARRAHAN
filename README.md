@@ -9,7 +9,7 @@
 * [1. Introducción / Objetivo general](#introducción--objetivo-general)
 * [2. Objetivos específicos](#objetivos-específicos)
 * [3. Descripción técnica](#Descripción-técnica)
-* [4. Arquitectura del sistema](#4.-Arquitectura-del-sistema)
+* [4. Arquitectura del sistema](#Arquitectura-del-sistema)
 * [5. Instrucciones de uso](#Instrucciones-de-uso)
 * [6. Estructura del repositorio](#estructura-del-repositorio)
 * [Autor](#autor)
@@ -74,8 +74,7 @@ Obtención de beta:
 
 # Estructura del repositorio
 
----
-.
+```
 ├── codigo/
 │  ├── coeficientes_aerodinámicos/
 │  ├── calculo_beta
@@ -91,6 +90,8 @@ Obtención de beta:
 │  └── variación_del_angulo_de_batimiento_durante_el giro_del_rotor_(beta)
 │
 └── README.md
+```
+
 ---
 
 # Autor
