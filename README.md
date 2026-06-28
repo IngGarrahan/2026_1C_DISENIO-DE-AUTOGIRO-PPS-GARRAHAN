@@ -7,8 +7,8 @@
 
 ## Índice
 * [1. Introducción / Objetivo general](#introducción--objetivo-general)
-* [2. Objetivos específicos](#2._Objetivos-específicos)
-* [3. Descripción técnica](#3.-Descripción-técnica)
+* [2. Objetivos específicos](#objetivos-específicos)
+* [3. Descripción técnica](#Descripción-técnica)
 * [4. Arquitectura del sistema](#4.-Arquitectura-del-sistema)
 * [5. Instrucciones de uso](#5.-Instrucciones-de-uso)
 * [Estructura del repositorio](#estructura-del-repositorio)
@@ -16,7 +16,7 @@
 
 ---
 
-# Introducción / Objetivo general
+# 1. Introducción / Objetivo general
 
 Este repositorio documenta el desarrollo de una Práctica Profesional Supervisada (PPS), realizada sobre el diseño dinámico y aerodinámico de un rotor de autogiro.
 Se busca desarrollar un modelo numérico para simular el comportamiento aerodinámico y dinámico de un rotor de autogiro mediante la Teoría de Elementos de Pala, obteniendo la distribución de fuerzas, momentos y parámetros aerodinámicos del sistema.
