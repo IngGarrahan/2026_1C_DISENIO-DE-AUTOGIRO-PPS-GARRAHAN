@@ -63,11 +63,13 @@ Donde $P(\psi)$ representa el amortiguamiento aerodinámico, $Q(\psi)$ la rigide
 ### Puesta en marcha
 
 Obtención de parametros físicos:
-  Ejecutar el archivo CALCULO DE SUSTENTACIÓN para obtener os datos de vuelo vertical y/o de avance.
+
+  Ejecutar el archivo CALCULO DE SUSTENTACIÓN para obtener los datos de vuelo vertical y/o de avance.
 
 Notas: Asegurarse de que las tablas de XFoil estén correctamente ubicadas dentro del directorio de ejecución para evitar fallas de interpolación fuera de los límites de Reynolds tabulados.
 
 Obtención de beta:
+
   Ejecutar el archivo CALCULO DE BETA para obtener el comportamiento del ángulo de batimiento a lo largo de la revolución.
 
 ---
@@ -96,6 +98,6 @@ Obtención de beta:
 
 # Autor
 
-<p align="center"> Alan Garrahan
+## <p align="center"> Alan Garrahan
 
-<img width="814" height="225" alt="image" src="https://github.com/user-attachments/assets/1b20a310-95c3-4436-a2dc-a868014db164" />
+<p align="center"> <img width="814" height="225" alt="image" src="https://github.com/user-attachments/assets/1b20a310-95c3-4436-a2dc-a868014db164" />
