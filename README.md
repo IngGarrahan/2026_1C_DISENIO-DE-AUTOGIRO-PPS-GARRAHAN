@@ -6,12 +6,12 @@
 ---
 
 ## Índice
-* 1. [Introducción / Objetivo general](#introducción--objetivo-general)
-* 2. [Objetivos específicos](#objetivos-específicos)
-* 3. [Descripción técnica](#Descripción-técnica)
-* 4. [Arquitectura del sistema](#4.-Arquitectura-del-sistema)
-* 5. [Instrucciones de uso](#Instrucciones-de-uso)
-* 6. [Estructura del repositorio](#estructura-del-repositorio)
+* [1. Introducción / Objetivo general](#introducción--objetivo-general)
+* [2. Objetivos específicos](#objetivos-específicos)
+* [3. Descripción técnica](#Descripción-técnica)
+* [4. Arquitectura del sistema](#4.-Arquitectura-del-sistema)
+* [5. Instrucciones de uso](#Instrucciones-de-uso)
+* [6. Estructura del repositorio](#estructura-del-repositorio)
 * [Autor](#autor)
 
 ---
